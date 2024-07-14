@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  font-family: Georgia;
+}
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.card-body {
+  text-align: center;
+}
+.card-footer {
+  display: flex;
+  justify-content: end;
+}
+.todo {
+  position: relative;
+  width: 100%;
+  background-color: purple;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: left !important;
+}
+.todo.selected {
+  background-color: green !important;
+  color: white;
+}
+
+.todo.selected::after {
+  position: absolute;
+  content: '✓';
+  right: 5px;
+}
+.todo::before {
+  position: absolute;
+  content: '▪︎';
+  color: purple;
+  font-size: 28px !important;
+  left: -16px;
+  top: -7px;
+}
+.todo.selected::before{
+  color:green;
+}
+.span{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.disabled {
+  background-color: gray !important;
+  color: black !important;
+  border: none !important;
+}
